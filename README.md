@@ -6,6 +6,25 @@ This repository is the open canon (the methodology, written as theses) plus a se
 
 ---
 
+## How to install
+
+Into your project root (sets up Claude Code + Codex). One command — clone + install:
+
+```bash
+curl -fsSL https://nextmovetheory.com/install.sh | bash
+```
+
+Or clone and run the installer locally:
+
+```bash
+git clone https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills.git
+bash Next-Move-Theory-Canon-and-Skills/install.sh --target .
+```
+
+[Full details ▸](#install-into-your-project)
+
+---
+
 ## There is an algorithm
 
 **There is an algorithm for making any business decision.**
@@ -34,32 +53,6 @@ This canon is the result of the last eight years of my work. Eight years ago I d
 The **skills** turn that algorithm into tools: feed in a product idea and get back a *decision*, not a description.
 
 I find this methodology incredibly beautiful and powerful, and sharing it with the world is my mission. I hope it brings you a great deal of value — and lets you clearly see the moves available to you.
-
----
-
-## How to install
-
-Install the canon and the skills **into your existing project** (the folder you run your agent from) — into `.claude/skills/` (Claude Code) and `.codex/skills/` (Codex), with the canon at `Next-Move-Theory-Canon/`. Three ways:
-
-**1. Clone the repo** — gets you the files:
-
-```bash
-git clone https://github.com/zamesin/Next-Move-Theory-Canon-and-Skills.git
-```
-
-**2. Run the installer from the clone** — this is what actually installs into your project (a bare clone leaves the skills in a nested `Skills/` folder where no agent looks):
-
-```bash
-bash Next-Move-Theory-Canon-and-Skills/install.sh --target .
-```
-
-**3. Or do both in one command** — clone + install in a single step, always pulling the current canon and skills:
-
-```bash
-curl -fsSL https://nextmovetheory.com/install.sh | bash
-```
-
-Then invoke a skill — `/diagnose` (what should I do next with my product?) or `/market-research …`. Re-running any of these is idempotent. The full file tree, the rules it injects, and the manual equivalent are in [Install into your project](#install-into-your-project) below.
 
 ---
 
