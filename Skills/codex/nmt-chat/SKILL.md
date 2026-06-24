@@ -14,12 +14,6 @@ description: >-
 user-invocable: true
 ---
 
-> **Update check — best-effort, ≤2s, never blocks.** Before the steps below, run
-> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-chat"`; on any error
-> or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`. If
-> behind, print one line — the `<installed> → <latest>` gap, a one-line summary per newer entry,
-> and "run $nmt-upgrade to update" — then continue. If it matches or `.nmt-version` is absent, continue.
-
 # Ask NMT — the conversational Next Move Theory advisor v1
 
 A senior product advisor you can talk to. Not a one-shot producer — a **multi-turn dialogue partner** that thinks in Ivan Zamesin's methodology and answers from the canon.
@@ -299,3 +293,8 @@ The four producer skills are a **chain**, not four interchangeable buttons. Each
 7. **Enrichment in its place?** Did outside info only *enrich*, never override the canon on methodology? Is the canon answer leading, the enrichment clearly labeled, and every web fact a verified clickable link?
 8. **Plain-language-led?** Does every point lead in the reader's own words, with methodology terms only in parentheses — no jargon-led sentences, bullets, or headings?
 9. **Clean output?** Job grammar intact in the methodology layer, Tier-A/B examples, sources linked, no file-path spam at the user.
+
+---
+
+> **Update check — do this at the very end (best-effort, ≤2s, never blocks).** After you've finished this skill's work and delivered the result — for a multi-turn chat (e.g. nmt-chat / nmt-diagnose), after your first substantive answer — run
+> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-chat"`; on any error or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`; if behind, add one line — the `<installed> → <latest>` gap, a one-line summary per newer entry, and "run $nmt-upgrade to update". If versions match or `.nmt-version` is absent, add nothing.

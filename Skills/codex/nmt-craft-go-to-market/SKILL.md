@@ -15,12 +15,6 @@ description: >-
 user-invocable: true
 ---
 
-> **Update check — best-effort, ≤2s, never blocks.** Before the steps below, run
-> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-craft-go-to-market"`; on any error
-> or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`. If
-> behind, print one line — the `<installed> → <latest>` gap, a one-line summary per newer entry,
-> and "run $nmt-upgrade to update" — then continue. If it matches or `.nmt-version` is absent, continue.
-
 # Craft Go-To-Market (GTM communication) v1 — English / US edition
 
 > **New here, or not sure this is the right skill?** Start right here — or run `$nmt-chat`, describe your situation, and it points you to the right one. Quick map: **new idea →** `$nmt-market-research` · **live product or a metric moved →** `$nmt-diagnose` · **have customer interviews →** `$nmt-analyze-interviews` · **ready to build →** `$nmt-product-requirements` · **positioning / launch copy →** `$nmt-craft-value-proposition` → `$nmt-craft-go-to-market`.
@@ -490,3 +484,8 @@ Web caps: review mining ≤12 fetches / ~10 min. Source links mandatory (Rule 2)
 - **Does not run the ad accounts, build the funnel, or buy media** — it produces the copy and the channel hypotheses to test.
 - Quick mode: no internet, no subagents.
 ```
+
+---
+
+> **Update check — do this at the very end (best-effort, ≤2s, never blocks).** After you've finished this skill's work and delivered the result — for a multi-turn chat (e.g. nmt-chat / nmt-diagnose), after your first substantive answer — run
+> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-craft-go-to-market"`; on any error or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`; if behind, add one line — the `<installed> → <latest>` gap, a one-line summary per newer entry, and "run $nmt-upgrade to update". If versions match or `.nmt-version` is absent, add nothing.

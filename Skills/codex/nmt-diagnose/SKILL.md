@@ -14,12 +14,6 @@ description: >-
 user-invocable: true
 ---
 
-> **Update check — best-effort, ≤2s, never blocks.** Before the steps below, run
-> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-diagnose"`; on any error
-> or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`. If
-> behind, print one line — the `<installed> → <latest>` gap, a one-line summary per newer entry,
-> and "run $nmt-upgrade to update" — then continue. If it matches or `.nmt-version` is absent, continue.
-
 # Diagnose — the Next Move Theory product diagnostic
 
 A chat-first diagnostic for a live product. It finds your real risks and best growth moves, says which one to tackle first, and points you to the skill that does it.
@@ -254,3 +248,8 @@ Per `../PRODUCER-CONTRACT.md`, this chat-first skill applies the contract partia
 - It does not auto-launch the recommended skill (you launch it).
 - It is not a generic feature-by-feature audit — it surfaces what the methodology uniquely finds, then prioritizes.
 - It writes no file unless asked.
+
+---
+
+> **Update check — do this at the very end (best-effort, ≤2s, never blocks).** After you've finished this skill's work and delivered the result — for a multi-turn chat (e.g. nmt-chat / nmt-diagnose), after your first substantive answer — run
+> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-diagnose"`; on any error or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`; if behind, add one line — the `<installed> → <latest>` gap, a one-line summary per newer entry, and "run $nmt-upgrade to update". If versions match or `.nmt-version` is absent, add nothing.

@@ -4,12 +4,6 @@ description: Generate the strongest possible Value Proposition for a chosen segm
 user-invocable: true
 ---
 
-> **Update check — best-effort, ≤2s, never blocks.** Before the steps below, run
-> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-craft-value-proposition"`; on any error
-> or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`. If
-> behind, print one line — the `<installed> → <latest>` gap, a one-line summary per newer entry,
-> and "run /nmt-upgrade to update" — then continue. If it matches or `.nmt-version` is absent, continue.
-
 # Craft Value Proposition v2
 
 > **New here, or not sure this is the right skill?** Start right here — or run `/nmt-chat`, describe your situation, and it points you to the right one. Quick map: **new idea →** `nmt-market-research` · **live product or a metric moved →** `nmt-diagnose` · **have customer interviews →** `nmt-analyze-interviews` · **ready to build →** `nmt-product-requirements` · **positioning / launch copy →** `nmt-craft-value-proposition` → `nmt-craft-go-to-market`.
@@ -763,3 +757,8 @@ Produce a `⚠️ Methodology violation` warning (not silent output) for any of:
 - [ ] **Step ledger:** every stage S0–S6 checked off by name; a skipped stage or gate was declared to the user, never silent.
 - [ ] **User claims stayed hypotheses:** ledger claims tagged (data / observation / hunch); the primary value prop does not rest primarily on a single unverified user hunch without saying so.
 - [ ] **Producer contract satisfied** (`../PRODUCER-CONTRACT.md`): helicopter-view printed before intake; output-format + output-path asked; if HTML, one self-contained `.html` with resolving anchors + `<details>`; the **"What you told me — and the risks I see in it"** block present (unless no input given); **validation-debt line** in Layer 1; the next step framed as **validate first, not build** (no bare "build it now"); on hand-off from nmt-market-research, asked what validation debt has been retired and re-tagged anything still unvalidated; Deep mode hit its evidence floor + self-critic loop (or flagged thin coverage + offered the web MCP).
+
+---
+
+> **Update check — do this at the very end (best-effort, ≤2s, never blocks).** After you've finished this skill's work and delivered the result — for a multi-turn chat (e.g. nmt-chat / nmt-diagnose), after your first substantive answer — run
+> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-craft-value-proposition"`; on any error or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`; if behind, add one line — the `<installed> → <latest>` gap, a one-line summary per newer entry, and "run /nmt-upgrade to update". If versions match or `.nmt-version` is absent, add nothing.

@@ -26,12 +26,6 @@ description: >-
 user-invocable: true
 ---
 
-> **Update check — best-effort, ≤2s, never blocks.** Before the steps below, run
-> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-analyze-interviews"`; on any error
-> or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`. If
-> behind, print one line — the `<installed> → <latest>` gap, a one-line summary per newer entry,
-> and "run /nmt-upgrade to update" — then continue. If it matches or `.nmt-version` is absent, continue.
-
 # Analyze Interviews v1
 
 > **v1 in one breath.** You already ran the interviews; this skill pulls the methodology out of them. It takes **one or many** interview files (transcripts, notes, sales calls, support logs, survey open-ends — AJTBD or not, good or bad), asks **which business task** you're solving (and helps you pick one if you can't), then reads **each interview in its own subagent** — a fan-out that keeps the run from ever overflowing context no matter how many large transcripts you load. Each interview is distilled to the AJTBD constructs with an **honest confidence** (a clean Core-Job extraction vs. a weak hypothesis) and **per-interview feedback** (what was found, what's missing, whether this interview can serve your task). The distillations are clustered into **segments by similar Core Jobs + similar success criteria + similar priority order**, and each segment's confidence is **computed from its supporting interviews' confidence**. Output — one report: data-quality summary, segments with personas, structured Solutions + Problems, a Consideration Set per segment, value hypotheses, and what to interview next.
@@ -392,3 +386,8 @@ Everything Quick does, plus a web wave **after** synthesis: subagents take the n
 - It does not size the market quantitatively or build a unit-economics model — separate skills.
 - It does not turn a value hypothesis into features or a PRD — that's `/nmt-craft-value-proposition` → `/nmt-product-requirements`.
 - It never fabricates a Job, a quote, or a confidence — thin data is reported as thin.
+
+---
+
+> **Update check — do this at the very end (best-effort, ≤2s, never blocks).** After you've finished this skill's work and delivered the result — for a multi-turn chat (e.g. nmt-chat / nmt-diagnose), after your first substantive answer — run
+> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-analyze-interviews"`; on any error or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`; if behind, add one line — the `<installed> → <latest>` gap, a one-line summary per newer entry, and "run /nmt-upgrade to update". If versions match or `.nmt-version` is absent, add nothing.

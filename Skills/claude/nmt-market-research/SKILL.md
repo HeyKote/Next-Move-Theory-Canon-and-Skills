@@ -4,12 +4,6 @@ description: Run market research for a product or feature idea using Ivan Zamesi
 user-invocable: true
 ---
 
-> **Update check — best-effort, ≤2s, never blocks.** Before the steps below, run
-> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-market-research"`; on any error
-> or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`. If
-> behind, print one line — the `<installed> → <latest>` gap, a one-line summary per newer entry,
-> and "run /nmt-upgrade to update" — then continue. If it matches or `.nmt-version` is absent, continue.
-
 # Market Research
 
 > **In one breath.** Before any research runs, a short intake closes the gaps that change the research: a few clarifying questions (with "I don't have this info" as a valid answer), any materials you already have read in, your inputs held as hypotheses rather than facts, and a quick direction confirmation. The deliverable is a **decision**: a one-page answer with a **GO (to validation) / NARROW / PIVOT** verdict, the customer segments scored on the four go/no-go questions (the selection screen), the make-or-break risk and how to test it, and **ranked strategic options** (including other markets the same idea could fit). Quick mode sizes honestly (one calculation, assumptions named); the 3-method averaging runs only in Deep mode, on real sources.
@@ -737,3 +731,8 @@ Framing: the goal is the success of the whole business initiative, not only the 
 - Quick mode: no internet, no subagents, no quantitative validation.
 - Does not pause to ask the user mid-pipeline (Deep mode runs straight through).
 - Does not invent sources or numbers; thin data is recorded as thin, never fabricated.
+
+---
+
+> **Update check — do this at the very end (best-effort, ≤2s, never blocks).** After you've finished this skill's work and delivered the result — for a multi-turn chat (e.g. nmt-chat / nmt-diagnose), after your first substantive answer — run
+> `curl -fsSL --max-time 2 "https://nextmovetheory.com/version?skill=nmt-market-research"`; on any error or timeout, skip silently. Compare `.nmt-version` (project root) with the feed's `latest`; if behind, add one line — the `<installed> → <latest>` gap, a one-line summary per newer entry, and "run /nmt-upgrade to update". If versions match or `.nmt-version` is absent, add nothing.
